@@ -6,39 +6,41 @@
 //
 
 import SwiftUI
+import WidgetKit
+
 
 struct ContentView: View {
     
+    init() {
+            
+        UITabBar.appearance().backgroundColor = UIColor.systemGray6
+        UITabBar.appearance().barTintColor = UIColor.systemGray6
+        
+    }
 
-    @State private var selection = 0
+
     
     var body: some View {
-        NavigationView {
-            VStack(alignment: .leading, spacing: 24) {
-                Picker(selection: $selection, label: Text(""), content: {
-                    Text("Upcoming 🚀").tag(0)
-                    Text("Past 🛰").tag(1)
-                }).pickerStyle(SegmentedPickerStyle())
-                .padding()
-                
-                if selection == 0 {
-                    UpcomingList()
-                
-       
-                }else {
-                    PastList()
-             
-
+        TabView() {
+            UpcomingView()
+                .tabItem {
+                    Label("Missions", systemImage: "binoculars")
                 }
-           
-            }
+              
+            OptionsView()
+                .tabItem {
+                    Label("News", systemImage: "newspaper")
+                }
+            
+            MapView()
+                .tabItem {
+                    Label("Maps", systemImage: "globe.europe.africa")
+                }
 
-            .frame(maxWidth: .infinity)
-            .background(Color.background)
         }
 
-        .accentColor(.primary)
     }
+
 }
 
 struct ContentView_Previews: PreviewProvider {

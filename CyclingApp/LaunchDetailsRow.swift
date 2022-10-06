@@ -27,9 +27,6 @@ struct LaunchDetailsRow: View {
             }
             
         
-  
-
-
             VStack(alignment: .leading,spacing: 6) {
                 // MARK: Transaction Merchant
                 Text(flight.name)
@@ -44,9 +41,9 @@ struct LaunchDetailsRow: View {
                         .opacity(0.7)
                         .lineLimit(1)
             
+                
             }
             Spacer()
-    
         }
         .padding([.top, .bottom], 8)
         .edgesIgnoringSafeArea(.all)
@@ -56,6 +53,6 @@ struct LaunchDetailsRow: View {
 
 struct LaunchDetailsRow_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchDetailsRow(flight: Comments(name: "Starlink V2"))
+        LaunchDetailsRow(flight: Comments(name: "Starlink V2", date_utc: "30/01/2022"))
     }
 }

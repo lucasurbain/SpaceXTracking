@@ -17,7 +17,7 @@ struct PastList: View {
         VStack {
             List(dataModel.beers) { comment in
                 NavigationLink(destination: DetailsList(flight: comment)) {
-                    LaunchDetailsRow(flight: Comments(name: comment.name))
+                    LaunchDetailsRow(flight: Comments(name: comment.name, date_utc: comment.date_utc))
                         .padding([.top, .bottom],2)
        
                 }
@@ -31,6 +31,7 @@ struct PastList: View {
            
         }
         .frame(maxWidth: .infinity)
+
     }
 }
 

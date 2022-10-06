@@ -20,6 +20,7 @@ extension Color {
 struct Comments: Codable, Identifiable {
     let id = UUID()
     let name: String
+    let date_utc: String
 
 }
 
@@ -34,7 +35,7 @@ class apiCall: ObservableObject {
     func getPreviousLaunches() {
         AF.request("https://api.spacexdata.com/v4/launches/past").response { response in
             self.beers = try! JSONDecoder().decode([Comments].self, from: response.data!).reversed()
- 
+
         }
     }
 

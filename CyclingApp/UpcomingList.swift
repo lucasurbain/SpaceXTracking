@@ -14,23 +14,30 @@ struct UpcomingList: View {
     
     @ObservedObject private var dataModel = apiCallPrevious()
     
+    
     var body: some View {
         VStack {
             List(dataModel.beers) { comment in
                 NavigationLink(destination: DetailsList(flight: comment)) {
-                    LaunchDetailsRow(flight: Comments(name: comment.name))
+                    LaunchDetailsRow(flight: Comments(name: comment.name, date_utc: comment.date_utc))
                         .padding([.top, .bottom],2)
                 }
+         
             }
             .scrollContentBackground(.hidden)
             .scrollIndicators(.hidden)
             .onAppear {
                 apiCallPrevious().getUpcomingLaunches()
             }
+            
+       
+
         }
         .frame(maxWidth: .infinity)
 
+
     }
+
 }
 
 
