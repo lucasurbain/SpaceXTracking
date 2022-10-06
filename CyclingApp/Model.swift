@@ -17,16 +17,27 @@ extension Color {
 }
 
 
-struct Comments: Codable, Identifiable {
+struct Comments: Decodable, Identifiable {
     let id = UUID()
     let name: String
     let date_utc: String
     let launchpad: String
+    let links: Links
+
 }
 
-struct Launchpad: Codable, Identifiable {
-    let id = UUID()
+struct Launchpad: Codable {
     let name: String
+}
+
+struct Links: Codable {
+
+    let patch: Patch
+}
+
+struct Patch: Codable {
+
+    let small: Optional<String>
 }
 
 
@@ -37,12 +48,12 @@ class apiCall: ObservableObject {
     
     init () {
         getPreviousLaunches()
+        
     }
 
     func getPreviousLaunches() {
         AF.request("https://api.spacexdata.com/v4/launches/past").response { response in
             self.beers = try! JSONDecoder().decode([Comments].self, from: response.data!).reversed()
-
         }
     }
 
@@ -61,8 +72,10 @@ class apiCallPrevious: ObservableObject {
     func getUpcomingLaunches() {
         AF.request("https://api.spacexdata.com/v4/launches/upcoming").response { response in
             self.beers = try! JSONDecoder().decode([Comments].self, from: response.data!)
-
+       
         }
+        
+
     }
     
 }
@@ -84,4 +97,3 @@ class apiCallLaunchPad {
     }
     
 }
-

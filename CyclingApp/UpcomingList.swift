@@ -19,7 +19,7 @@ struct UpcomingList: View {
         VStack {
             List(dataModel.beers) { comment in
                 NavigationLink(destination: DetailsList(flight: comment)) {
-                    LaunchDetailsRow(flight: Comments(name: comment.name, date_utc: comment.date_utc, launchpad: comment.launchpad))
+                    LaunchDetailsRow(flight: Comments(name: comment.name, date_utc: comment.date_utc, launchpad: comment.launchpad, links: comment.links))
                         .padding([.top, .bottom],2)
                 }
          

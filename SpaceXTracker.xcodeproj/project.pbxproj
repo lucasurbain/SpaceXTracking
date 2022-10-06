@@ -23,7 +23,6 @@
 		F19B6CD928EEB0B100D80115 /* OptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B6CD828EEB0B100D80115 /* OptionsView.swift */; };
 		F19B6CDB28EEB0FE00D80115 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B6CDA28EEB0FE00D80115 /* MapView.swift */; };
 		F19B6CDF28EECA8D00D80115 /* PointOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B6CDE28EECA8D00D80115 /* PointOfInterest.swift */; };
-		F1AA41D428EF09FE00C38773 /* ACarousel in Frameworks */ = {isa = PBXBuildFile; productRef = F1AA41D328EF09FE00C38773 /* ACarousel */; };
 		F1D366CD28E72B06001D2D4A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F1D366CC28E72B06001D2D4A /* Alamofire */; };
 /* End PBXBuildFile section */
 
@@ -71,7 +70,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F1AA41D428EF09FE00C38773 /* ACarousel in Frameworks */,
 				F1D366CD28E72B06001D2D4A /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -176,7 +174,6 @@
 			name = SpaceXTracker;
 			packageProductDependencies = (
 				F1D366CC28E72B06001D2D4A /* Alamofire */,
-				F1AA41D328EF09FE00C38773 /* ACarousel */,
 			);
 			productName = CyclingApp;
 			productReference = F190D22328E6D30F00D83360 /* SpaceXTracker.app */;
@@ -664,11 +661,6 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		F1AA41D328EF09FE00C38773 /* ACarousel */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F1AA41D228EF09FE00C38773 /* XCRemoteSwiftPackageReference "ACarousel" */;
-			productName = ACarousel;
-		};
 		F1D366CC28E72B06001D2D4A /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = F1D366CB28E72B06001D2D4A /* XCRemoteSwiftPackageReference "Alamofire" */;

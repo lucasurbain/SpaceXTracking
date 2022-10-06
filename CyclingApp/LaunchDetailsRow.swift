@@ -15,18 +15,13 @@ struct LaunchDetailsRow: View {
     var body: some View {
         HStack(spacing: 20) {
 
-            
-            
-            let string = flight.name
-            if(string.contains("Starlink")) {
-                Image("starlink.png")
-                    .resizable()
-                    .frame(width: 80, height: 80)
-            }else {
-                Image("spacex.jpg")
-                    .resizable()
-                    .frame(width: 80, height: 80)
+            AsyncImage(url: URL(string: flight.links.patch.small ?? "spacex.jpg")) { image in
+                image.resizable()
+            } placeholder: {
+                ProgressView()
             }
+            .frame(width: 80, height: 80)
+       
             
         
             VStack(alignment: .leading,spacing: 6) {
@@ -55,6 +50,6 @@ struct LaunchDetailsRow: View {
 
 struct LaunchDetailsRow_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchDetailsRow(flight: Comments(name: "Starlink V2", date_utc: "30/01/2022", launchpad: "KSC LC 39A"))
+        LaunchDetailsRow(flight: Comments(name: "Starlink V2", date_utc: "30/01/2022", launchpad: "KSC LC 39A", links: Links(patch: Patch(small: "https://images2.imgbox.com/eb/d8/D1Yywp0w_o.png"))))
     }
 }

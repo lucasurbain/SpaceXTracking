@@ -23,8 +23,7 @@ struct UpcomingView: View {
                 
                 if selection == 0 {
                     UpcomingList()
-                  
-
+                
                 }else {
                     PastList()
                   

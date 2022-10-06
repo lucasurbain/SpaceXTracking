@@ -18,16 +18,16 @@ struct DetailsList: View {
 
     var body: some View {
         VStack {
-            let string = flight.name
-            if(string.contains("Starlink")) {
-                Image("starlink.png")
-                    .resizable()
-                    .frame(width: 200, height: 200)
-            }else {
-                Image("spacex.jpg")
-                    .resizable()
-                    .frame(width: 200, height: 200)
+            AsyncImage(url: URL(string: flight.links.patch.small ?? "spacex.jpg")) { image in
+                image.resizable()
+            } placeholder: {
+                ProgressView()
             }
+            .frame(width: 200, height: 200)
+            .padding([.bottom], 20)
+                       
+ 
+            
             Text(flight.name)
                 .bold()
                 .font(.system(size: 24))
@@ -50,7 +50,7 @@ struct DetailsList: View {
 
 struct DetailsList_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsList(flight: Comments(name: "Starlink V2", date_utc: "30/01/2022", launchpad: "KSC LC 39A"))
+        DetailsList(flight: Comments(name: "Starlink V2", date_utc: "30/01/2022", launchpad: "KSC LC 39A", links: Links(patch: Patch(small: "https://images2.imgbox.com/eb/d8/D1Yywp0w_o.png"))))
     }
 
 }
