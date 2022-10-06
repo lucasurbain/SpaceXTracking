@@ -45,14 +45,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		F190D22328E6D30F00D83360 /* CyclingApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CyclingApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F190D22328E6D30F00D83360 /* SpaceXTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceXTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F190D22628E6D30F00D83360 /* CyclingAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingAppApp.swift; sourceTree = "<group>"; };
 		F190D22828E6D30F00D83360 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		F190D22A28E6D31100D83360 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F190D22D28E6D31100D83360 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
-		F190D23328E6D31100D83360 /* CyclingAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyclingAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F190D23328E6D31100D83360 /* SpaceXTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceXTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F190D23728E6D31100D83360 /* CyclingAppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingAppTests.swift; sourceTree = "<group>"; };
-		F190D23D28E6D31100D83360 /* CyclingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CyclingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F190D23D28E6D31100D83360 /* SpaceXTrackerUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpaceXTrackerUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F190D24128E6D31100D83360 /* CyclingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingAppUITests.swift; sourceTree = "<group>"; };
 		F190D24328E6D31100D83360 /* CyclingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CyclingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		F190D25028E6D32600D83360 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
@@ -106,9 +106,9 @@
 		F190D22428E6D30F00D83360 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F190D22328E6D30F00D83360 /* CyclingApp.app */,
-				F190D23328E6D31100D83360 /* CyclingAppTests.xctest */,
-				F190D23D28E6D31100D83360 /* CyclingAppUITests.xctest */,
+				F190D22328E6D30F00D83360 /* SpaceXTracker.app */,
+				F190D23328E6D31100D83360 /* SpaceXTrackerTests.xctest */,
+				F190D23D28E6D31100D83360 /* SpaceXTrackerUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -161,9 +161,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		F190D22228E6D30F00D83360 /* CyclingApp */ = {
+		F190D22228E6D30F00D83360 /* SpaceXTracker */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F190D24728E6D31100D83360 /* Build configuration list for PBXNativeTarget "CyclingApp" */;
+			buildConfigurationList = F190D24728E6D31100D83360 /* Build configuration list for PBXNativeTarget "SpaceXTracker" */;
 			buildPhases = (
 				F190D21F28E6D30F00D83360 /* Sources */,
 				F190D22028E6D30F00D83360 /* Frameworks */,
@@ -173,18 +173,18 @@
 			);
 			dependencies = (
 			);
-			name = CyclingApp;
+			name = SpaceXTracker;
 			packageProductDependencies = (
 				F1D366CC28E72B06001D2D4A /* Alamofire */,
 				F1AA41D328EF09FE00C38773 /* ACarousel */,
 			);
 			productName = CyclingApp;
-			productReference = F190D22328E6D30F00D83360 /* CyclingApp.app */;
+			productReference = F190D22328E6D30F00D83360 /* SpaceXTracker.app */;
 			productType = "com.apple.product-type.application";
 		};
-		F190D23228E6D31100D83360 /* CyclingAppTests */ = {
+		F190D23228E6D31100D83360 /* SpaceXTrackerTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F190D24A28E6D31100D83360 /* Build configuration list for PBXNativeTarget "CyclingAppTests" */;
+			buildConfigurationList = F190D24A28E6D31100D83360 /* Build configuration list for PBXNativeTarget "SpaceXTrackerTests" */;
 			buildPhases = (
 				F190D22F28E6D31100D83360 /* Sources */,
 				F190D23028E6D31100D83360 /* Frameworks */,
@@ -195,14 +195,14 @@
 			dependencies = (
 				F190D23528E6D31100D83360 /* PBXTargetDependency */,
 			);
-			name = CyclingAppTests;
+			name = SpaceXTrackerTests;
 			productName = CyclingAppTests;
-			productReference = F190D23328E6D31100D83360 /* CyclingAppTests.xctest */;
+			productReference = F190D23328E6D31100D83360 /* SpaceXTrackerTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		F190D23C28E6D31100D83360 /* CyclingAppUITests */ = {
+		F190D23C28E6D31100D83360 /* SpaceXTrackerUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F190D24D28E6D31100D83360 /* Build configuration list for PBXNativeTarget "CyclingAppUITests" */;
+			buildConfigurationList = F190D24D28E6D31100D83360 /* Build configuration list for PBXNativeTarget "SpaceXTrackerUITests" */;
 			buildPhases = (
 				F190D23928E6D31100D83360 /* Sources */,
 				F190D23A28E6D31100D83360 /* Frameworks */,
@@ -213,9 +213,9 @@
 			dependencies = (
 				F190D23F28E6D31100D83360 /* PBXTargetDependency */,
 			);
-			name = CyclingAppUITests;
+			name = SpaceXTrackerUITests;
 			productName = CyclingAppUITests;
-			productReference = F190D23D28E6D31100D83360 /* CyclingAppUITests.xctest */;
+			productReference = F190D23D28E6D31100D83360 /* SpaceXTrackerUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -241,7 +241,7 @@
 					};
 				};
 			};
-			buildConfigurationList = F190D21E28E6D30F00D83360 /* Build configuration list for PBXProject "CyclingApp" */;
+			buildConfigurationList = F190D21E28E6D30F00D83360 /* Build configuration list for PBXProject "SpaceXTracker" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -258,9 +258,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F190D22228E6D30F00D83360 /* CyclingApp */,
-				F190D23228E6D31100D83360 /* CyclingAppTests */,
-				F190D23C28E6D31100D83360 /* CyclingAppUITests */,
+				F190D22228E6D30F00D83360 /* SpaceXTracker */,
+				F190D23228E6D31100D83360 /* SpaceXTrackerTests */,
+				F190D23C28E6D31100D83360 /* SpaceXTrackerUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -332,12 +332,12 @@
 /* Begin PBXTargetDependency section */
 		F190D23528E6D31100D83360 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F190D22228E6D30F00D83360 /* CyclingApp */;
+			target = F190D22228E6D30F00D83360 /* SpaceXTracker */;
 			targetProxy = F190D23428E6D31100D83360 /* PBXContainerItemProxy */;
 		};
 		F190D23F28E6D31100D83360 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F190D22228E6D30F00D83360 /* CyclingApp */;
+			target = F190D22228E6D30F00D83360 /* SpaceXTracker */;
 			targetProxy = F190D23E28E6D31100D83360 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -541,7 +541,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CyclingApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CyclingApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpaceXTracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SpaceXTracker";
 			};
 			name = Debug;
 		};
@@ -561,7 +561,7 @@
 				SWIFT_EMIT_LOC_STRINGS = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CyclingApp.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CyclingApp";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SpaceXTracker.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/SpaceXTracker";
 			};
 			name = Release;
 		};
@@ -606,7 +606,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F190D21E28E6D30F00D83360 /* Build configuration list for PBXProject "CyclingApp" */ = {
+		F190D21E28E6D30F00D83360 /* Build configuration list for PBXProject "SpaceXTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F190D24528E6D31100D83360 /* Debug */,
@@ -615,7 +615,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F190D24728E6D31100D83360 /* Build configuration list for PBXNativeTarget "CyclingApp" */ = {
+		F190D24728E6D31100D83360 /* Build configuration list for PBXNativeTarget "SpaceXTracker" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F190D24828E6D31100D83360 /* Debug */,
@@ -624,7 +624,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F190D24A28E6D31100D83360 /* Build configuration list for PBXNativeTarget "CyclingAppTests" */ = {
+		F190D24A28E6D31100D83360 /* Build configuration list for PBXNativeTarget "SpaceXTrackerTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F190D24B28E6D31100D83360 /* Debug */,
@@ -633,7 +633,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F190D24D28E6D31100D83360 /* Build configuration list for PBXNativeTarget "CyclingAppUITests" */ = {
+		F190D24D28E6D31100D83360 /* Build configuration list for PBXNativeTarget "SpaceXTrackerUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				F190D24E28E6D31100D83360 /* Debug */,
