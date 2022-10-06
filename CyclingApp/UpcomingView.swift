@@ -12,10 +12,9 @@ struct UpcomingView: View {
     
     @State private var selection = 0
     
-    
     var body: some View {
         NavigationView {
-            VStack(alignment: .leading, spacing: 24) {
+            VStack(alignment: .leading) {
                 Picker(selection: $selection, label: Text(""), content: {
                     Text("Upcoming 🚀").tag(0)
                     Text("Past 🛰").tag(1)

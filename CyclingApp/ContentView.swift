@@ -12,12 +12,9 @@ import WidgetKit
 struct ContentView: View {
     
     init() {
-            
         UITabBar.appearance().backgroundColor = UIColor.systemGray6
         UITabBar.appearance().barTintColor = UIColor.systemGray6
-        
     }
-
 
     
     var body: some View {

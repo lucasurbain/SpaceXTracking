@@ -21,8 +21,15 @@ struct Comments: Codable, Identifiable {
     let id = UUID()
     let name: String
     let date_utc: String
-
+    let launchpad: String
 }
+
+struct Launchpad: Codable, Identifiable {
+    let id = UUID()
+    let name: String
+}
+
+
 
 class apiCall: ObservableObject {
     
@@ -59,3 +66,22 @@ class apiCallPrevious: ObservableObject {
     }
     
 }
+
+
+class apiCallLaunchPad {
+    
+    @Published var launchpad: [Launchpad] = [Launchpad]()
+    
+
+    
+    func getLaunchPad(launchpad: String) -> Request {
+        let r = AF.request("https://api.spacexdata.com/v4/launchpads/5e9e4502f509094188566f88").response { response in
+            self.launchpad = try! JSONDecoder().decode([Launchpad].self, from: response.data!)
+            
+        }
+        
+        return r
+    }
+    
+}
+

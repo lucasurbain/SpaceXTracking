@@ -10,6 +10,8 @@ import SwiftUI
 struct LaunchDetailsRow: View {
     let flight: Comments
     
+
+    
     var body: some View {
         HStack(spacing: 20) {
 
@@ -53,6 +55,6 @@ struct LaunchDetailsRow: View {
 
 struct LaunchDetailsRow_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchDetailsRow(flight: Comments(name: "Starlink V2", date_utc: "30/01/2022"))
+        LaunchDetailsRow(flight: Comments(name: "Starlink V2", date_utc: "30/01/2022", launchpad: "KSC LC 39A"))
     }
 }

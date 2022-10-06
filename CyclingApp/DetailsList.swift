@@ -11,10 +11,10 @@ import Foundation
 struct DetailsList: View {
     
     let flight: Comments
+
     
     @State var comments = [Comments]()
     
-
 
     var body: some View {
         VStack {
@@ -35,21 +35,22 @@ struct DetailsList: View {
         
             Text(flight.date_utc)
                 .padding(5)
-  
             
+            Text(flight.launchpad)
+            
+
+            
+
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.background)
-        
-
-    }
     
-
+    }
 }
 
 struct DetailsList_Previews: PreviewProvider {
     static var previews: some View {
-        DetailsList(flight: Comments(name: "Starlink V2", date_utc: "30/01/2022"))
+        DetailsList(flight: Comments(name: "Starlink V2", date_utc: "30/01/2022", launchpad: "KSC LC 39A"))
     }
 
 }
