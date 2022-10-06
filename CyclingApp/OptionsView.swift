@@ -47,20 +47,43 @@ struct OptionsView: View {
                     VStack {
                         Image(item.url)
                             .resizable()
+                            .scaledToFit()
                             .frame(width: 250, height: 250)
-                            .padding(20)
-                        
+                            .padding(40)
                         
                         Text(item.name)
                             .bold()
                             .font(.system(size: 24))
-                            .padding(20)
+                            .padding([.bottom],2)
+                        
+                        Text(item.size + " | " + item.payload)
+                            .font(.system(size: 16))
+                            .padding([.bottom],2)
+                        Text(item.first_flight + " | $" + item.cost_per_launch)
+                            .font(.system(size: 16))
+                            .padding([.bottom],2)
+                        
+                        if(item.reusable == "true") {
+                            Text("Reusable: "+item.reusable + " ✅")
+                                .font(.system(size: 16))
+                                .padding([.bottom],50)
+                                .foregroundColor(.green)
+                        }else {
+                            Text("Reusable: "+item.reusable + " ❌")
+                                .font(.system(size: 16))
+                                .padding([.bottom],50)
+                                .foregroundColor(.red)
+                        }
+                
                     }
-                    .background(Color.white)
+                    .background(Color.systemBackground)
                     .padding(20)
-           
+      
+              
                 }
                 Spacer()
+  
+        
                  
             }
 
