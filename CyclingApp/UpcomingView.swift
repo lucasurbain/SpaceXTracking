@@ -23,13 +23,10 @@ struct UpcomingView: View {
                 
                 if selection == 0 {
                     UpcomingList()
-                
                 }else {
                     PastList()
-                  
                 }
             }
-
             .frame(maxWidth: .infinity)
             .background(Color.background)
         }

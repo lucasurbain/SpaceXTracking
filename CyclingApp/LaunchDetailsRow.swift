@@ -9,12 +9,9 @@ import SwiftUI
 
 struct LaunchDetailsRow: View {
     let flight: Comments
-    
 
-    
     var body: some View {
         HStack(spacing: 20) {
-
             AsyncImage(url: URL(string: flight.links.patch.small ?? "spacex.jpg")) { image in
                 image.resizable()
             } placeholder: {
@@ -22,8 +19,6 @@ struct LaunchDetailsRow: View {
             }
             .frame(width: 80, height: 80)
        
-            
-        
             VStack(alignment: .leading,spacing: 6) {
                 // MARK: Transaction Merchant
                 Text(flight.name)
@@ -37,14 +32,11 @@ struct LaunchDetailsRow: View {
                         .font(.footnote)
                         .opacity(0.7)
                         .lineLimit(1)
-            
-                
             }
             Spacer()
         }
         .padding([.top, .bottom], 8)
         .edgesIgnoringSafeArea(.all)
-
     }
 }
 

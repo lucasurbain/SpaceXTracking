@@ -7,14 +7,12 @@
 
 import SwiftUI
 
-
 struct UpcomingList: View {
     
     @State var comments = [Comments]()
     
     @ObservedObject private var dataModel = apiCallPrevious()
     
-
     var body: some View {
         VStack {
             List(dataModel.beers) { comment in
@@ -22,24 +20,16 @@ struct UpcomingList: View {
                     LaunchDetailsRow(flight: Comments(name: comment.name, date_utc: comment.date_utc, launchpad: comment.launchpad, links: comment.links))
                         .padding([.top, .bottom],2)
                 }
-         
             }
             .scrollContentBackground(.hidden)
             .scrollIndicators(.hidden)
             .onAppear {
                 apiCallPrevious().getUpcomingLaunches()
             }
-            
-       
-
         }
         .frame(maxWidth: .infinity)
-
-
     }
-
 }
-
 
 struct UpcomingList_Previews: PreviewProvider {
     static var previews: some View {

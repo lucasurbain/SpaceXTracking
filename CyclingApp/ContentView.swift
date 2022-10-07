@@ -8,7 +8,6 @@
 import SwiftUI
 import WidgetKit
 
-
 struct ContentView: View {
     
     init() {
@@ -16,27 +15,22 @@ struct ContentView: View {
         UITabBar.appearance().barTintColor = UIColor.systemGray6
     }
 
-    
     var body: some View {
         TabView() {
             UpcomingView()
                 .tabItem {
                     Label("Missions", systemImage: "binoculars")
                 }
-              
             OptionsView()
                 .tabItem {
                     Label("News", systemImage: "newspaper")
                 }
-            
             MapView()
                 .tabItem {
                     Label("Maps", systemImage: "globe.europe.africa")
                 }
         }
-
     }
-
 }
 
 struct ContentView_Previews: PreviewProvider {
