@@ -26,6 +26,7 @@ struct PastList: View {
             .onAppear {
                 apiCall().getPreviousLaunches()
             }
+            .navigationTitle("Past 🛰")
         }
         .frame(maxWidth: .infinity)
     }

@@ -31,6 +31,7 @@ struct UpcomingView: View {
             .background(Color.background)
         }
         .accentColor(.primary)
+
     }
 }
 

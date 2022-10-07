@@ -26,6 +26,7 @@ struct UpcomingList: View {
             .onAppear {
                 apiCallPrevious().getUpcomingLaunches()
             }
+            .navigationTitle("Upcoming 🚀")
         }
         .frame(maxWidth: .infinity)
     }

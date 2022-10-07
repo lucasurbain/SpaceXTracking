@@ -39,7 +39,6 @@ struct OptionsView: View {
     var body: some View {
 
         ScrollView(.horizontal, showsIndicators: false) {
-
             HStack(spacing: 20) {
                 Spacer()
                 ForEach(data) { item in

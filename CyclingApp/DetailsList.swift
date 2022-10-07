@@ -14,19 +14,47 @@ struct DetailsList: View {
     
     @State var comments = [Comments]()
     
+
     @State private var selectedDate = Date()
     
     let notify = NotificationHandler()
     
     var body: some View {
             VStack {
-                AsyncImage(url: URL(string: flight.links.patch.small ?? "spacex.jpg")) { image in
+                HStack {
+                    
+                    Spacer()
+                    
+                    Button {
+                        notify.askPermission()
+                        
+                        let body = "Watch falcon-9 lift " + flight.name + " in orbit! Launch scheduled for " + flight.date_utc
+                        
+                        notify.sendNotification(date: Date(), type: "time", timeInterval: 5, title: flight.name, body: body)
+        
+                    } label: {
+                        Text("Me notifier  🔔")
+                    }
+                    .padding(20)
+                    .font(.system(size: 20))
+                    .background(Color.systemBackground)
+                    .cornerRadius(30)
+                    .opacity(0.9)
+                    .shadow(color: Color.black.opacity(0.1), radius: 5, x: 0, y: 2)
+                    .shadow(color: Color.blue.opacity(0.1), radius: 10, x: 0, y: 10)
+                    .padding(.trailing, 20)
+                    
+                }
+                Spacer()
+                
+                AsyncImage(url: URL(string: flight.links.patch.small ?? "spacex.png")) { image in
                     image.resizable()
                 } placeholder: {
                     ProgressView()
                 }
                 .frame(width: 200, height: 200)
                 .padding([.bottom], 20)
+           
                 
                 Text(flight.name)
                     .bold()
@@ -35,14 +63,7 @@ struct DetailsList: View {
             
                 Text("KSC | CCSFS")
          
-                Button("Click Me") {
-                    notify.askPermission()
-                    
-                    let body = "Watch falcon-9 lift " + flight.name + " in orbit! Launch scheduled for" + flight.date_utc
-                    
-                    notify.sendNotification(date: Date(), type: "time", timeInterval: 5, title: flight.name, body: body)
-                }
-                .padding(20)
+                Spacer()
             }
             .frame(maxWidth: .infinity, maxHeight: .infinity)
             .background(Color.background)

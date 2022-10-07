@@ -20,13 +20,10 @@ struct LaunchDetailsRow: View {
             .frame(width: 80, height: 80)
        
             VStack(alignment: .leading,spacing: 6) {
-                // MARK: Transaction Merchant
                 Text(flight.name)
                     .font(.subheadline)
                     .bold()
                     .lineLimit(1)
-                
-                // MARK: Transaction Category
                 
                     Text("Falcon 9 | Block 5")
                         .font(.footnote)
