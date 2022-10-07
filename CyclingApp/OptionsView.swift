@@ -43,7 +43,6 @@ struct OptionsView: View {
             HStack(spacing: 20) {
                 Spacer()
                 ForEach(data) { item in
-         
                     VStack {
                         Image(item.url)
                             .resizable()
@@ -74,19 +73,12 @@ struct OptionsView: View {
                                 .padding([.bottom],50)
                                 .foregroundColor(.red)
                         }
-                
                     }
                     .background(Color.systemBackground)
                     .padding(20)
-      
-              
                 }
                 Spacer()
-  
-        
-                 
             }
-
         }
         .frame(maxWidth: .infinity, maxHeight: .infinity)
         .background(Color.background)

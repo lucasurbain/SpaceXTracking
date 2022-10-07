@@ -13,6 +13,8 @@ struct PastList: View {
     
     @ObservedObject private var dataModel = apiCall()
     
+    let launch_date = DateParsed()
+    
     var body: some View {
         VStack {
             List(dataModel.beers) { comment in
@@ -22,6 +24,9 @@ struct PastList: View {
        
                 }
              
+
+  
+                
             }
             .scrollContentBackground(.hidden)
             .scrollIndicators(.hidden)

@@ -24,6 +24,7 @@
 		F19B6CDB28EEB0FE00D80115 /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B6CDA28EEB0FE00D80115 /* MapView.swift */; };
 		F19B6CDF28EECA8D00D80115 /* PointOfInterest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F19B6CDE28EECA8D00D80115 /* PointOfInterest.swift */; };
 		F1D366CD28E72B06001D2D4A /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = F1D366CC28E72B06001D2D4A /* Alamofire */; };
+		F1FAECFD28F00F1D00B0791A /* NotificationHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1FAECFC28F00F1D00B0791A /* NotificationHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +43,19 @@
 			remoteInfo = CyclingApp;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		F1FAECF728F00C5800B0791A /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		F190D22328E6D30F00D83360 /* SpaceXTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SpaceXTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -63,6 +77,9 @@
 		F19B6CD828EEB0B100D80115 /* OptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OptionsView.swift; sourceTree = "<group>"; };
 		F19B6CDA28EEB0FE00D80115 /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		F19B6CDE28EECA8D00D80115 /* PointOfInterest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointOfInterest.swift; sourceTree = "<group>"; };
+		F1FAECE328F00C5500B0791A /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		F1FAECE528F00C5500B0791A /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		F1FAECFC28F00F1D00B0791A /* NotificationHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationHandler.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,9 +111,11 @@
 		F190D21A28E6D30F00D83360 = {
 			isa = PBXGroup;
 			children = (
+				F1FAECFB28F00F0900B0791A /* Handlers */,
 				F190D22528E6D30F00D83360 /* CyclingApp */,
 				F190D23628E6D31100D83360 /* CyclingAppTests */,
 				F190D24028E6D31100D83360 /* CyclingAppUITests */,
+				F1FAECE228F00C5500B0791A /* Frameworks */,
 				F190D22428E6D30F00D83360 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -156,6 +175,23 @@
 			path = CyclingAppUITests;
 			sourceTree = "<group>";
 		};
+		F1FAECE228F00C5500B0791A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				F1FAECE328F00C5500B0791A /* WidgetKit.framework */,
+				F1FAECE528F00C5500B0791A /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F1FAECFB28F00F0900B0791A /* Handlers */ = {
+			isa = PBXGroup;
+			children = (
+				F1FAECFC28F00F1D00B0791A /* NotificationHandler.swift */,
+			);
+			path = Handlers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -166,6 +202,7 @@
 				F190D21F28E6D30F00D83360 /* Sources */,
 				F190D22028E6D30F00D83360 /* Frameworks */,
 				F190D22128E6D30F00D83360 /* Resources */,
+				F1FAECF728F00C5800B0791A /* Embed Foundation Extensions */,
 			);
 			buildRules = (
 			);
@@ -222,7 +259,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1400;
+				LastSwiftUpdateCheck = 1410;
 				LastUpgradeCheck = 1400;
 				TargetAttributes = {
 					F190D22228E6D30F00D83360 = {
@@ -294,6 +331,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F190D25B28E6E9BA00D83360 /* DetailsList.swift in Sources */,
+				F1FAECFD28F00F1D00B0791A /* NotificationHandler.swift in Sources */,
 				F190D25728E6E8F000D83360 /* UpcomingList.swift in Sources */,
 				F19B6CDF28EECA8D00D80115 /* PointOfInterest.swift in Sources */,
 				F19B6CD728EEAF5300D80115 /* UpcomingView.swift in Sources */,

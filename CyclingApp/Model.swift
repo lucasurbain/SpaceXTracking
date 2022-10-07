@@ -30,6 +30,13 @@ struct Launchpad: Codable {
     let name: String
 }
 
+
+struct Booster: Codable {
+    let serial: String
+    let reuse_count: Int
+}
+
+
 struct Links: Codable {
 
     let patch: Patch
@@ -69,31 +76,37 @@ class apiCallPrevious: ObservableObject {
 
     }
     
+
     func getUpcomingLaunches() {
         AF.request("https://api.spacexdata.com/v4/launches/upcoming").response { response in
             self.beers = try! JSONDecoder().decode([Comments].self, from: response.data!)
        
         }
-        
-
     }
-    
 }
 
 
-class apiCallLaunchPad {
+class allData: ObservableObject {
     
     @Published var launchpad: [Launchpad] = [Launchpad]()
     
-
+    @Published var booster: [Booster] = [Booster]()
     
-    func getLaunchPad(launchpad: String) -> Request {
-        let r = AF.request("https://api.spacexdata.com/v4/launchpads/5e9e4502f509094188566f88").response { response in
+    func getLaunchPad(launchpad: String){
+        AF.request("https://api.spacexdata.com/v4/launchpads/\(launchpad)").response { response in
             self.launchpad = try! JSONDecoder().decode([Launchpad].self, from: response.data!)
-            
+            debugPrint(response)
         }
         
-        return r
+    }
+    
+    func getBoosterStatus(booster: String){
+        AF.request("https://api.spacexdata.com/v4/cores/\(booster)").response { response in
+            self.booster = try! JSONDecoder().decode([Booster].self, from: response.data!)
+            
+        }
+    
     }
     
 }
+

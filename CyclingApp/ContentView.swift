@@ -33,7 +33,6 @@ struct ContentView: View {
                 .tabItem {
                     Label("Maps", systemImage: "globe.europe.africa")
                 }
-
         }
 
     }

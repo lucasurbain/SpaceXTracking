@@ -50,6 +50,6 @@ struct LaunchDetailsRow: View {
 
 struct LaunchDetailsRow_Previews: PreviewProvider {
     static var previews: some View {
-        LaunchDetailsRow(flight: Comments(name: "Starlink V2", date_utc: "30/01/2022", launchpad: "KSC LC 39A", links: Links(patch: Patch(small: "https://images2.imgbox.com/eb/d8/D1Yywp0w_o.png"))))
+        LaunchDetailsRow(flight: Comments(name: "Starlink V2", date_utc: "2022/12/02", launchpad: "KSC LC 39A", links: Links(patch: Patch(small: "https://images2.imgbox.com/eb/d8/D1Yywp0w_o.png"))))
     }
 }
