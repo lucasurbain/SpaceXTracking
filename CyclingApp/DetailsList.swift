@@ -19,10 +19,6 @@ struct DetailsList: View {
     
     let notify = NotificationHandler()
     
-    let launch_date = DateParsed()
-    
-
-    
     var body: some View {
             VStack {
                 AsyncImage(url: URL(string: flight.links.patch.small ?? "spacex.jpg")) { image in
@@ -38,17 +34,13 @@ struct DetailsList: View {
                     .font(.system(size: 24))
                     .multilineTextAlignment(.center)
                 
-        
-                Text(Date().displayFormat)
                 
-
-                
-                Text(flight.launchpad)
+                Text("KSC | CCSFS")
          
                 Button("Click Me") {
                     notify.askPermission()
                     
-                    let body = "Watch falcon-9 lift " + flight.name + " in orbit! Launch scheduled for 2:30pm."
+                    let body = "Watch falcon-9 lift " + flight.name + " in orbit! Launch scheduled for" + flight.date_utc
                     
                     notify.sendNotification(date: Date(), type: "time", timeInterval: 5, title: flight.name, body: body)
                 }
